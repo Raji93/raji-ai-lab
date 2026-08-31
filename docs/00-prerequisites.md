@@ -1,46 +1,46 @@
-# Before You Arrive — Prerequisites
+# Get Set Up
 
-This lab runs **entirely in your browser** in the Microsoft Foundry portal. There's
-no code to write and nothing to install. But a few things need to be set up *before*
-the session so we don't lose lab time to account creation.
+**Do this now, while we review the opening slides.** Creating a free Azure account is
+the one prerequisite for following along — we'll start building the lab in a few
+minutes, and you'll need this ready to go.
 
-**Please complete steps 1–2 before you walk in.** Step 3 is a backup.
-
----
-
-## 1. Bring a laptop
-
-Any laptop with a modern browser (Chrome, Edge, or Firefox) and reliable Wi-Fi.
-A tablet will struggle with the portal — a laptop is strongly recommended.
-
-## 2. Get access to Microsoft Foundry
-
-You need an Azure account to sign in to the Microsoft Foundry portal at
-**[ai.azure.com](https://ai.azure.com)**.
-
-Pick whichever applies to you:
-
-- **You already have an Azure subscription** (personal or through work where you can
-  create resources): you're all set. Just confirm you can sign in at
-  [ai.azure.com](https://ai.azure.com).
-- **You don't have one:** create a **free Azure account**, which includes credit for
-  new users, at [azure.microsoft.com/free](https://azure.microsoft.com/free). This
-  takes about 15 minutes and requires a credit card for identity verification (you
-  won't be charged on the free tier). **Do this the day before, not in the room.**
-
-> If your employer's Azure tenant blocks resource creation, use a personal free
-> account instead — you don't want to discover a permissions block mid-lab.
-
-## 3. Backup: a GitHub account (no Azure needed)
-
-If your Azure account isn't ready in time, you can still follow along using
-**GitHub Models**, which gives free access to many of the same models with just a
-GitHub login. Have a [github.com](https://github.com) account ready as a fallback.
-We'll point you to this only if you get stuck on Azure setup.
+The whole lab runs **in your browser** in the Microsoft Foundry portal. There's no
+code to write and nothing to install. Just two things to get in place:
 
 ---
 
-## What we'll do together (so you know what to expect)
+## 1. A laptop
+
+A **laptop is strongly preferred** — the Microsoft Foundry portal is hard to work in
+on a phone or tablet. Any laptop with a modern browser (Chrome, Edge, or Firefox) and
+reliable Wi-Fi will do.
+
+## 2. Create a free Azure account
+
+You'll sign in to the Microsoft Foundry portal at **[ai.azure.com](https://ai.azure.com)**
+with a free Azure account. Create one now:
+
+👉 **[Create your free Azure account](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account?icid=azurefreeaccount)**
+
+- Select **"Try Azure for free"** and follow the prompts.
+- You'll get a **$200 credit** (valid 30 days) plus free monthly amounts of 20+
+  services — far more than this lab needs.
+- **Sign in with a personal Microsoft account or GitHub account.**
+- Have a **phone number** and a **non-prepaid credit or debit card** ready for
+  identity verification.
+- **You won't be charged.** The free account has spending protection, and any $1
+  authorization hold you see during signup is temporary and gets reversed.
+- Budget about **15 minutes** to complete it.
+
+> **Please use a personal free account, not your work/corporate account.** Company
+> tenants often block the resource creation this lab needs, and you don't want to hit
+> a permissions wall while we're building. A fresh free account avoids all of that.
+>
+> The free account with $200 credit is for **new** Azure customers, one per person.
+
+---
+
+## What we'll do together (so you know what's coming)
 
 - **Act 1:** Ask a bare AI model some questions about a company it's never heard of,
   and watch it confidently make up the answers.
