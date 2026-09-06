@@ -42,15 +42,4 @@ For each question:
 Be concise and factual.
 ```
 
----
 
-## One instruction we deliberately left out
-
-An earlier version of this lab asked the agent to "state how many searches you ran."
-**Don't do this.** In testing, an agent reported running *five* searches when the trace
-showed exactly **one**. Models have no reliable introspection into their own retrieval
-process — they narrate what sounds plausible.
-
-This is a genuinely useful thing to say out loud during the lab: **trust the trace, not
-the agent's self-report.** It's a small lesson in evaluating AI systems that attendees
-can take back to their own work.
