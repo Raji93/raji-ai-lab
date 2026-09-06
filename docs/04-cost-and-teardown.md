@@ -1,4 +1,4 @@
-# Cost & Teardown
+# Cost & Clean Up
 
 This lab is designed to be cheap, but Act 2 costs more than Act 1 — worth understanding
 before you build, and worth cleaning up after.
@@ -23,12 +23,8 @@ before you build, and worth cleaning up after.
   Act 2 is slower and pricier per answer than Act 1 — a fair trade-off to mention out
   loud.
 
-## Set an expiration policy
 
-Where offered, set an **expiration policy** on file stores so they clean themselves up
-even if someone forgets the teardown steps.
-
-## Teardown checklist
+## CleanUp checklist
 
 Do these in order at the end of the session:
 
@@ -39,13 +35,3 @@ Do these in order at the end of the session:
 5. Delete the **project**, or the whole **resource group** if you made one for this lab.
    Deleting the resource group removes everything in one action and is the safest
    option.
-
-## For facilitators running a full room
-
-- Each attendee creates their own project, search service, and knowledge base, so
-  there's no shared bottleneck — but that also means **every attendee has a search
-  service to delete.** Put teardown on your final slide and give it two full minutes.
-- Ask attendees to use the **free tier** of Azure AI Search where available.
-- If you can get **Azure Pass** codes or a sponsored environment from your Microsoft
-  contact, that absorbs the cost entirely and removes the billing anxiety from the room.
-- Send the teardown checklist in your follow-up email too — people leave in a hurry.
