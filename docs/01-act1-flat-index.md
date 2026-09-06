@@ -26,8 +26,7 @@ a trace and see exactly which chunks the model was handed.
 
 1. Open **Agents** and create a **new agent** on your `gpt-4o-mini` deployment.
 2. In the **Setup** pane, find **Knowledge** and select **Add → Files**.
-3. Upload **all three** documents from [`../sample-docs/`](../sample-docs/) — both the
-   `hr-docs/` and `product-docs/` folders — into this **one** index.
+3. Upload **all three** documents from [`../sample-docs/`](../sample-docs/) into this **one** index.
 4. Finish adding the **File Search** tool.
 
 That flatness is the point: three documents, two very different topics, one
@@ -86,8 +85,10 @@ file_search → message
 ```
 
 One search. One pass. The same behavior whether the question needs one fact or five,
-one document or four. Simple RAG doesn't *think* about retrieval — it retrieves, then
-answers.
+one document or four. 
+
+**Simple RAG doesn't *think* about retrieval — it retrieves, then answers.
+**
 
 ## Step 7 — Note what you'd want at scale
 
