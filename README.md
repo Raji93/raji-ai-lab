@@ -126,6 +126,7 @@ three is how you get there.
    rebuild on Foundry IQ and compare.
 4. **[Cost & Teardown](docs/04-cost-and-teardown.md)** — clean up (especially the search
    service!).
+5.  **summit-gear-docs.zip	All three documents in one download — grab this at the start of Act 1**
 
 ## A note on cost
 
