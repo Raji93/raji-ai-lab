@@ -3,8 +3,6 @@
 **Goal:** Build classic RAG — one index, one search, one answer — and learn to read what it's actually doing under the hood. 
 By the end of this act you'll be able to open a trace and see exactly which chunks the model was handed.
 
-**Time:** ~20 minutes
-
 ---
 
 ## Before you click anything — what you're actually creating
