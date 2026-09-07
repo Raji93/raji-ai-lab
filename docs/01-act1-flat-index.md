@@ -88,8 +88,7 @@ Once the deployment shows as succeeded, you're ready to build the agent.
 
 1. Open **Agents** and create a **new agent** on your `gpt-4o-mini` deployment.
 2. In the **Setup** pane, find **Knowledge** and select **Add → Files**.
-3. Upload **all three** documents from [`../sample-docs/`](../sample-docs/) — both the
-   `hr-docs/` and `product-docs/` folders — into this **one** index.
+3. Upload **all three** documents from [`../sample-docs/`](../sample-docs/) — into this **one** index.
 4. Finish adding the **File Search** tool.
 
 That flatness is the point: three documents, two very different topics, one
