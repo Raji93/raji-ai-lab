@@ -79,6 +79,6 @@ Azure free accounts include spending protection, and any temporary authorization
 - [ ] Laptop ready
 - [ ] Stable Wi-Fi connection
 - [ ] Free Azure account created
-- [ ] Able to sign in at [ai.azure.com](https://ai.azure.com)
+- [ ] Able to sign in at [azure.com](https://portal.azure.com/)
 
 🎉 Once you've completed the checklist, you're ready to build your first grounded AI agent.
