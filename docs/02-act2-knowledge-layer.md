@@ -4,7 +4,6 @@
 multiple knowledge sources, with an engine that plans the query instead of running a
 single lookup. Then compare the two traces side by side.
 
-**Time:** ~22 minutes
 
 > **What Foundry IQ is:** a shared knowledge layer. Instead of wiring retrieval into
 > every agent, you define a knowledge base once, connect it to one or more knowledge
