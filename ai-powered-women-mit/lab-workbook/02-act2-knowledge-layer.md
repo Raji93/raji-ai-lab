@@ -15,6 +15,8 @@ single lookup. Then compare the two traces side by side.
 
 ## Step 1 — Create a knowledge base with two sources
 
+A knowledge base is to be crrated using a fodunry IQ resource.update the steps of creating a Fodunry IQ resource in Azure portal here.
+
 In the Foundry portal, create a **knowledge base** and add **two knowledge sources**:
 
 1. **HR source** — upload the two files from
