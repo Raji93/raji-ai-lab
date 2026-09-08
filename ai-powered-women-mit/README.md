@@ -41,7 +41,8 @@ pages first, then answer.
 
 ### How the "fetch" part actually works
 
-<img width="1536" height="1024" alt="Designer (41)" src="https://github.com/user-attachments/assets/151c5be3-96a2-4977-93ba-de4e977c394f" />
+<img width="1536" height="1024" alt="Designer (41)" src="https://github.com/user-attachments/assets/c9065131-84e0-45b0-8c66-9553d7fbf946" />
+
 
 In short: documents get split into small **chunks**, each chunk's meaning is turned into
 a list of numbers (an **embedding**), and when you ask a question it gets turned into
