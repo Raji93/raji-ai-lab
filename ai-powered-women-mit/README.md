@@ -119,12 +119,12 @@ three is how you get there.
 
 ## Ready? Start here
 
-1. **[Prerequisites](docs/00-prerequisites.md)** — set up your free Azure account if you havent already done this.
-2. **[Act 1 — Retrieval as a Lookup](docs/01-act1-flat-index.md)** — build it, then read
+1. **[Prerequisites](lab-workbook/00-prerequisites.md)** — set up your free Azure account if you havent already done this.
+2. **[Act 1 — Retrieval as a Lookup](lab-workbook/01-act1-flat-index.md)** — build it, then read
    the trace.
-3. **[Act 2 — Retrieval as a Knowledge Layer](docs/02-act2-knowledge-layer.md)** —
+3. **[Act 2 — Retrieval as a Knowledge Layer](lab-workbook/02-act2-knowledge-layer.md)** —
    rebuild on Foundry IQ and compare.
-4. **[Cost & Teardown](docs/04-cost-and-teardown.md)** — clean up (especially the search
+4. **[Cost & Teardown](lab-workbook/04-cost-and-teardown.md)** — clean up (especially the search
    service!).
 5.  **summit-gear-docs.zip	All three documents in one download — grab this at the start of Act 1**
 
