@@ -1,4 +1,4 @@
-# 🧪 Raji AI Lab
+# 🧪 Raji's AI Lab
 
 Artifacts, playbooks, and hands-on labs from AI community events, workshops, and talks I've facilitated — for product managers, builders, and anyone curious about applied AI.
 
