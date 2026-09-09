@@ -8,7 +8,7 @@ I'm Rajya Laxmi Yellajosyula (Raji), Senior AI Product Manager at Microsoft. Thi
 
 | Event | What it covers | Folder |
 |---|---|---|
-| 🎤 **Seattle Tech Week 2026** — *AI Agents as Force Multipliers for Solo Product Managers* | A Scope → Build → Iterate playbook for running enterprise pilots without an engineering team | [`solo-pm-pilot-skills/`](./solo-pm-pilot-skills) |
+| 🎤 **Seattle Tech Week 2026** — *AI Agents as Force Multipliers for Solo Product Managers* | A Scope → Build → Iterate playbook for running enterprise pilots without an engineering team | [`seattle-tech-week26-solo-pm-pilot-skills/`](./seattle-tech-week26-solo-pm-pilot-skills) |
 | 🧵 **MIT AI-Powered Women — Tinkering Lab** — *Is RAG Dead? Let's Build the Version That Isn't* | A hands-on lab building two RAG architectures live, no prior AI experience needed | [`ai-powered-women-mit/`](./ai-powered-women-mit) |
 
 More sessions get added here as I run them.
