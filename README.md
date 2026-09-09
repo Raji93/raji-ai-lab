@@ -1,8 +1,10 @@
 # 🔭 Raji's AI Lab
 
-Artifacts, playbooks, and hands-on labs from AI community events, workshops, and talks I've facilitated — for product managers, builders, and anyone curious about applied AI.
+Artifacts, playbooks, and hands-on labs from AI community events, workshops, and talks I've facilitated — for Product managers, builders, and anyone curious about applied AI.
 
-I'm Rajya Laxmi Yellajosyula (Raji), Senior AI Product Manager at Microsoft. This repo is where each session I run gets a permanent, usable home — so if you were in the room, you can come back to it, and if you weren't, you can still get the full playbook.
+I'm Rajya Laxmi Yellajosyula (Raji), Senior AI Product Manager at Microsoft. I frequently speak about my work in the AI space at conferences like Microsoft Build, Microsoft Ignite, Oracle AI World, and online technical webinars. Lately, I've also been focused on raising community awareness around AI and AI product management more broadly.
+
+This repository is a one-stop shop for the events I've conducted and supported as hands-on exercises — so if you were in the room, you can come back to it, and if you weren't, you can still get the full playbook.
 
 ## Sessions in this lab
 
@@ -11,7 +13,7 @@ I'm Rajya Laxmi Yellajosyula (Raji), Senior AI Product Manager at Microsoft. Thi
 | 🎤 **Seattle Tech Week 2026** — *AI Agents as Force Multipliers for Solo Product Managers* | A Scope → Build → Iterate playbook for running enterprise pilots without an engineering team | [`seattle-tech-week26-solo-pm-pilot-skills/`](./seattle-tech-week26-solo-pm-pilot-skills) |
 | 🧵 **MIT AI-Powered Women — Tinkering Lab** — *Is RAG Dead? Let's Build the Version That Isn't* | A hands-on lab building two RAG architectures live, no prior AI experience needed | [`ai-powered-women-mit/`](./ai-powered-women-mit) |
 
-More sessions get added here as I run them.
+More community sessions gets added here as I run them.
 
 ## Connect
 
