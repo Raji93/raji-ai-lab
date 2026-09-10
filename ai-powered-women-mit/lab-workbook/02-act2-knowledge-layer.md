@@ -13,11 +13,32 @@ single lookup. Then compare the two traces side by side.
 
 ---
 
-## Step 1 — Create a knowledge base with two sources
+## Step 1 — Create an Azure AI Search service
 
-A knowledge base is to be crrated using a fodunry IQ resource.update the steps of creating a Fodunry IQ resource in Azure portal here.
+Foundry IQ knowledge bases need a search service to live on, and Act 1's flat index
+already used one — but if you're starting fresh for Act 2, or want a dedicated service
+for this exercise, create one now:
 
-In the Foundry portal, create a **knowledge base** and add **two knowledge sources**:
+1. From your Foundry project, jump to [portal.azure.com](https://portal.azure.com) and search for **"AI Search"** and select **Create a search service**.
+2. Fill in the **Basics** tab:
+   - **Subscription** — your Azure subscription.
+   - **Resource group** — reuse the same resource group as your Foundry project (keeps
+     everything together for cleanup later).
+   - **Service name** — a globally unique, lowercase name (e.g. `test-iq12`). Azure
+     checks availability live as you type.
+   - **Location** — ideally the same region as your Foundry project.
+   - **Pricing tier** — select **Free** (50 MB storage, 1 replica, 1 partition, 1 search
+     unit). That's more than enough for this lab's three-document corpus.
+3. Click **Review + create**, then **Create**. Deployment takes about a minute.
+
+> ⚠️ **Free tier is capped at one per subscription per region.** If you already have a
+> free-tier search service from Act 1, reuse it — you can create the knowledge base on
+> the same service instead of provisioning a second one.
+
+## Step 2 — Create a knowledge base with two sources
+
+Back in the Foundry portal, create a **knowledge base** on the search service you just
+created, and add **two knowledge sources**:
 
 1. **HR source** — upload the two files from
    [`../sample-docs/hr-docs/`](../sample-docs/hr-docs/).
@@ -30,7 +51,7 @@ two named domains under one endpoint.
 > **Note:** a knowledge base and its sources must live on the same search service, and
 > a single knowledge base can front up to 10 sources.
 
-## Step 2 — Set retrieval reasoning effort to *medium*
+## Step 3 — Set retrieval reasoning effort to *medium*
 
 This is the setting that matters. **Retrieval reasoning effort** controls how much
 planning the engine does. Iterative search — where the engine searches again if the
@@ -39,7 +60,7 @@ single pass.
 
 Set it to **medium**.
 
-## Step 3 — Create an agent that uses the knowledge base
+## Step 4 — Create an agent that uses the knowledge base
 
 1. Create a **new agent** on the same **`gpt-4o-mini`** deployment. (Keep Act 1's agent
    intact — you'll want both to compare.)
@@ -50,7 +71,7 @@ Set it to **medium**.
 Notice the instructions are nearly identical to Act 1's. **The prompt isn't what
 changed — the retrieval architecture is.**
 
-## Step 4 — Ask the same questions, and read the new trace
+## Step 5 — Ask the same questions, and read the new trace
 
 Ask the same questions you asked in Act 1. Then open the trace. It looks different:
 
@@ -62,19 +83,56 @@ Conversation
    └─ Tool: message
 ```
 
-Three things to point out:
+Two things to point out before you even look at call count:
 
 1. **`mcp_list_tools`** — the agent is *discovering* the knowledge base as a tool.
    Knowledge is now an endpoint any agent can call, not retrieval logic baked into this
    one agent.
 2. **`knowledge_base_retrieve`** replaces `file_search`. The agent asks the knowledge
-   layer for what it needs; the layer decides how to get it.
-3. **Click that node.** The output is a list of individually-identified sources —
-   each with its own `uid`, snippet, and source file — and the answer cites them
-   inline, like `【8:1†product-spec-sheet.md】`. One call, chunks drawn from *both*
-   knowledge sources, each separately attributable.
+   layer for what it needs; the layer decides how to get it — including whether one
+   call is enough.
 
-## Step 5 — The honest comparison
+### Example 1 — a question with conflicting sources: two calls
+
+Ask: *"How many days a week can I work remotely?"*
+
+The engine calls `knowledge_base_retrieve` **twice**. Here's why: the first call likely
+surfaces the Employee Handbook's remote-work section (an older 2-day limit). At
+**medium** reasoning effort, the engine judges whether that's actually sufficient — for
+a policy question, it isn't confident that's still current, so it searches again. The
+second call surfaces the March 2026 People Team memo, which raised the limit to 3 days.
+The final answer reconciles both, explicitly noting the memo *supersedes* the
+handbook, and cites both files inline:
+`【9:0†remote-work-memo.md】【9:1†employee-handbook.md】`.
+
+### Example 2 — a question spanning both knowledge sources: one call
+
+Ask: *"I'm a full-time employee based in the Boulder office, working on customer demos
+for the Summit X200 headlamp. How many days a week can I work remotely, and what's the
+battery life and warranty on the X200 if a customer asks?"*
+
+This time the engine needs only **one** call — even though the answer draws from
+**both** named sources (`hrpolicies` and `productspecs`). A single
+`knowledge_base_retrieve` call isn't scoped to one source; it can search across every
+source in the knowledge base at once and return individually-attributed chunks from
+each. The answer cites `remote-work-memo.md` for the policy half and
+`product-spec-sheet.md` twice — once for battery life, once for warranty — each with
+its own `uid` and snippet.
+
+**The actual lesson, side by side:**
+
+| | Example 1 | Example 2 |
+|---|---|---|
+| Question touches | One domain (HR), two conflicting documents | Two domains (HR + Product), complementary documents |
+| Calls made | 2 — search, judge insufficient, search again | 1 — first pass already sufficient |
+| Why | Reconciling an outdated vs. updated policy needs a second look | Nothing conflicting to resolve; one search spans both sources |
+
+Call count isn't "one call per source" and it isn't "more sources means more calls." It
+tracks whether the engine judges its first pass **sufficient** — and one call can
+already pull individually-attributable chunks from every source in the knowledge base.
+That's the actual capability worth pointing at on screen.
+
+## Step 6 — The honest comparison
 
 Put the two answers side by side. On a three-document corpus, **they will often be
 comparable.** Act 1 answers most of these questions well.
@@ -97,16 +155,6 @@ What genuinely changed is **structural**, and you can point at all of it on scre
 | Governance | Whatever's in the index | Source-level, permission-aware |
 | Scaling | One query must find everything | Source selection narrows the search |
 
-## Step 6 — Trust the trace, not the agent
-
-Worth doing live, because it's a genuinely useful lesson: ask an agent how many
-searches it ran. In our testing, an agent confidently claimed **five searches** when the
-trace showed exactly **one**.
-
-Models don't have reliable introspection into their own retrieval. If you want to know
-what a system did, **read the trace.** That habit will serve attendees far beyond this
-lab.
-
 ---
 
 ## The verdict
@@ -120,4 +168,3 @@ Retrieval didn't die. It stopped being a single lookup and became a **layer**:
 That's the answer to "is RAG dead?" — *one-shot RAG is fading; retrieval is becoming
 infrastructure.*
 
-➡️ Wrap up with [`04-cost-and-teardown.md`](04-cost-and-teardown.md).
