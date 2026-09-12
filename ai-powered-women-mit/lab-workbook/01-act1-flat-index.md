@@ -84,7 +84,7 @@ Once the deployment shows as succeeded, you're ready to build the agent.
 
 ## Step 3 — Create an agent with File Search
 
-1. Open **Agents** and create a **new agent** on your `gpt-4o-mini` deployment.
+1. Open **Agents** and create a **new agent** on your `gpt-5.4-mini` deployment.
 2. In the **Setup** pane, find **Knowledge** and select **Add → Files**.
 3. Upload **all three** documents from [`../sample-docs/`](../sample-docs/) — into this **one** index.
 4. Finish adding the **File Search** tool.
