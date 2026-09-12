@@ -62,7 +62,7 @@ Set it to **medium**.
 
 ## Step 4 — Create an agent that uses the knowledge base
 
-1. Create a **new agent** on the same **`gpt-4o-mini`** deployment. (Keep Act 1's agent
+1. Create a **new agent** on the same **`gpt-5.4-mini`** deployment. (Keep Act 1's agent
    intact — you'll want both to compare.)
 2. Attach the **knowledge base** you just created.
 3. Paste the **Act 2 instructions** from
