@@ -40,16 +40,41 @@ for this exercise, create one now:
 Back in the Foundry portal, create a **knowledge base** on the search service you just
 created, and add **two knowledge sources**:
 
-1. **HR source** — upload the two files from
-   [`../sample-docs/hr-docs/`](../sample-docs/hr-docs/).
-2. **Product source** — upload the one file from
-   [`../sample-docs/product-docs/`](../sample-docs/product-docs/).
+| Field | Value |
+|---|---|
+| Name | `summit-gear-kb` |
+| Description | *Company knowledge base covering HR policy, remote work guidance, and product specifications. Use for employee questions about benefits, leave, and workplace policy, and for customer-facing questions about product features and specs.* |
+| Chat completions model | same deployment used in Act 1 |
+| Retrieval reasoning effort | **Medium** — this is the setting that matters, set it now (see callout below) |
+| Output mode | Extractive data (leave default) |
+| Retrieval instructions | `Prioritize 'hrpolicies' for questions about benefits, leave, or workplace policy. Query 'productspecs' for questions about product features or specifications.` |
+
+> **Why medium?** Retrieval reasoning effort controls how much planning the engine
+> does. Iterative search — where the engine searches again if the first results aren't
+> good enough — depends on **medium** effort. On minimal, you get a single pass, same as
+> Act 1.
+
+Then add **two knowledge sources** (via **Upload files**, one at a time — names must be
+**lowercase with no underscores**):
+
+| Source name | Description | Files |
+|---|---|---|
+| `hrpolicies` | *Employee handbook and remote work policy — use for questions about benefits, leave, and workplace policy.* | `employee-handbook.md`, `remote-work-memo.md` |
+| `productspecs` | *Product specifications — use for questions about product features and specs.* | `product-spec-sheet.md` |
 
 Same three documents as Act 1 — but no longer one undifferentiated pile. They're now
 two named domains under one endpoint.
 
 > **Note:** a knowledge base and its sources must live on the same search service, and
 > a single knowledge base can front up to 10 sources.
+>
+> ⚠️ Don't upload all three files into a single source — that just recreates Act 1's
+> flat index under a new name and defeats the point of this act.
+
+
+Same three documents as Act 1 — but no longer one undifferentiated pile. They're now
+two named domains under one endpoint.
+
 
 ## Step 3 — Set retrieval reasoning effort to *medium*
 
