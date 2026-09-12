@@ -67,12 +67,12 @@ that model inside the project.
 
 1. In the Foundry portal, open the **Model catalog** (under **Discover → Models** in
    some layouts).
-2. Search for and select **`gpt-4o-mini`**.
+2. Search for and select **`gpt-5.4-mini`**.
 3. Select **Deploy**, choose the **Global Standard** deployment type, and keep the
    default deployment name.
 4. Confirm, and wait for the deployment to finish.
 
-> **Why `gpt-4o-mini`?** It's inexpensive, fast, and more than capable for this lab. We
+> **Why `gpt-5.4-mini`?** It's inexpensive, fast, and more than capable for this lab. We
 > use the **same model in both acts on purpose** — so if Act 2 behaves differently,
 > it's the retrieval architecture doing the work, not a bigger model.
 
