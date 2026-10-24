@@ -2,7 +2,7 @@
 
 Artifacts, playbooks, and hands-on labs from AI community events, workshops, and talks I've facilitated — for Product managers, builders, and anyone curious about applied AI.
 
-I'm Rajya Laxmi Yellajosyula (Raji), Senior AI Product Manager at Microsoft. I frequently speak about my work in the AI space at conferences like Microsoft Build, Microsoft Ignite, Oracle AI World, and online technical webinars. Lately, I've also been focused on raising community awareness around AI and AI product management more broadly.
+I'm Rajya Laxmi Yellajosyula (Raji), an experienced Product and Program leader who is a builder at heart. I previously spoke about my work in the AI space at conferences like Microsoft Build, Microsoft Ignite, Oracle AI World, and online technical webinars. Lately, I've also been focused on raising community awareness around AI and AI product management more broadly, speaking at MIT, AI-powered Women Conference, Product-led Summit 2026, Seattle Tech Week 2026, Seattle AI Week 2026, and a few more online forums.
 
 This repository is a one-stop shop for the events I've conducted and supported as hands-on exercises — so if you were in the room, you can come back to it, and if you weren't, you can still get the full playbook.
 
