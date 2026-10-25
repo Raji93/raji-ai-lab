@@ -1,7 +1,15 @@
-# 🔑 Keys You Shouldn't Hand Your Agent
-
+<img width="1200" height="400" alt="banner" src="https://github.com/user-attachments/assets/e8a8974d-223d-443f-af37-df553424d157" />
 <div align="center">
 <p><strong>Welcome, and thank you for joining me at <a href="https://luma.com/b58ib6mr">Seattle AI Week 2026</a>.</strong></p>
+
+
+## 🎤 Session reference
+
+If you're here because of my session, you can find the details here:
+
+[Keys You Shouldn't Hand Your Agent: Staying Safe as Personal Agents Take Over Home and Work · Luma](https://luma.com/b58ib6mr)
+
+
 <p><strong>If you're here, you're probably about to let an AI agent into your inbox, calendar or wallet, or you already have.</strong></p>
 
 </div>
@@ -21,15 +29,7 @@ This playbook helps you make that click on purpose. It will help you:
 
 The goal is not to scare you off agents. It is to help you use them with your eyes open.
 
----
 
-## 🎤 Session reference
-
-If you're here because of my session, you can find the details here:
-
-[Keys You Shouldn't Hand Your Agent: Staying Safe as Personal Agents Take Over Home and Work · Luma](https://luma.com/b58ib6mr)
-
----
 
 ## 🔄 The core loop
 
@@ -47,14 +47,14 @@ This is the safety rhythm for any personal agent:
 
 This folder includes:
 
-- **A single four-part playbook**, all in one page
+- **A playbook to understand how personal agents work**
 - **Three skills**, one for each step of the loop
 - **Three paste-ready prompt versions** of those skills, for any AI chat
-- **A printable one-page checklist**
+- **A printable one-page checklist that you can fully use**
 
 ### The playbook
 
-One page, four parts: [`playbook/playbook.md`](./playbook/playbook.md)
+ [`playbook/playbook.md`](./playbook/playbook.md)
 
 | # | Page | What you'll get |
 |---|---|---|
@@ -73,25 +73,6 @@ One page, four parts: [`playbook/playbook.md`](./playbook/playbook.md)
 
 Paste-ready versions live in [`prompts/`](./prompts). The one-page checklist is in [`checklists/`](./checklists).
 
-### Folder map
-
-```
-seattle-ai-week26-keys-you-shouldnt-hand-your-agent/
-├── README.md
-├── playbook/
-│   └── playbook.md        ← all four parts in one page
-├── skills/
-│   ├── vet-an-agent/SKILL.md
-│   ├── check-the-consent/SKILL.md
-│   └── audit-your-keys/SKILL.md
-├── prompts/
-│   ├── vet-an-agent.md
-│   ├── check-the-consent.md
-│   └── audit-your-keys.md
-└── checklists/
-    ├── access-checklist.md
-    └── access-checklist.pdf
-```
 
 ---
 
