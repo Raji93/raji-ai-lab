@@ -12,7 +12,7 @@ This repository is a one-stop shop for the events I've conducted and supported a
 |---|---|---|
 | 🎤 **Seattle Tech Week 2026** — *AI Agents as Force Multipliers for Solo Product Managers* | A Scope → Build → Iterate playbook for running enterprise pilots without an engineering team | [`seattle-tech-week26-solo-pm-pilot-skills/`](./seattle-tech-week26-solo-pm-pilot-skills) |
 | 🧵 **MIT AI-Powered Women — Tinkering Lab** — *Is RAG Dead? Let's Build the Version That Isn't* | A hands-on lab building two RAG architectures live, no prior AI experience needed | [`ai-powered-women-mit/`](./ai-powered-women-mit) |
-| 🎤 **Seattle AI Week 2026** — *Keys You Shouldn't Hand Your Agent* | Staying safe as Personal agents take over Home and Work.| [`ai-powered-women-mit/`](./TBD) |
+| 🎤 **Seattle AI Week 2026** — *Keys You Shouldn't Hand Your Agent* | Staying safe as Personal agents take over Home and Work.| [`seattle-ai-week26-keys-you-shouldnt-hand-your-agent/`](./seattle-ai-week26-keys-you-shouldnt-hand-your-agent) |
 
 More community sessions gets added here as I run them.
 
